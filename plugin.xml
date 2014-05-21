@@ -32,6 +32,8 @@
         <header-file src="src/ios/gad/GADAdSize.h" />
         <header-file src="src/ios/gad/GADBannerView.h" />
         <header-file src="src/ios/gad/GADBannerViewDelegate.h" />
+        <header-file src="src/ios/gad/GADInAppPurchase.h" />
+        <header-file src="src/ios/gad/GADInAppPurchaseDelegate.h" />
         <header-file src="src/ios/gad/GADInterstitial.h" />
         <header-file src="src/ios/gad/GADInterstitialDelegate.h" />
         <header-file src="src/ios/gad/GADModules.h" />
