@@ -4,6 +4,8 @@
 
 #import "DFPBannerView.h"
 #import "DFPInterstitial.h"
+#import "GADAdMobExtras.h"
+#import "GADAdSize.h"
 
 #pragma mark DFP Plugin
 
