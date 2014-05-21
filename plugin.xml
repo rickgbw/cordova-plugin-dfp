@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.google.cordova.plugin.DFPPlugin"
+        version="0.0.1">
+    
+    <name>DFPPlugin</name>
+    <description>DoubleClick for Publishers Plugin</description>
+    <license>MIT</license>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+    <js-module src="www/DFPPlugin.js" name="DFP">
+        <clobbers target="window.dfp"/>
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DFPPlugin">
+                <param name="ios-package" value="DFPPlugin" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/DFPPlugin.h" />
+        <source-file src="src/ios/DFPPlugin.m" />
+        
+        <!-- Google AdMob header files -->
+        <header-file src="src/ios/gad/GADAdMobExtras.h" />
+        <header-file src="src/ios/gad/GADAdNetworkExtras.h" />
+        <header-file src="src/ios/gad/GADAdSize.h" />
+        <header-file src="src/ios/gad/GADBannerView.h" />
+        <header-file src="src/ios/gad/GADBannerViewDelegate.h" />
+        <header-file src="src/ios/gad/GADInterstitial.h" />
+        <header-file src="src/ios/gad/GADInterstitialDelegate.h" />
+        <header-file src="src/ios/gad/GADModules.h" />
+        <header-file src="src/ios/gad/GADRequest.h" />
+        <header-file src="src/ios/gad/GADRequestError.h" />
+
+        <!-- DFP header files -->
+        <header-file src="src/ios/gad/DoubleClick/DFPBannerView.h" />
+        <header-file src="src/ios/gad/DoubleClick/DFPExtras.h" />
+        <header-file src="src/ios/gad/DoubleClick/DFPInterstitial.h" />
+        <header-file src="src/ios/gad/DoubleClick/DFPSwipeableBannerView.h" />
+        <header-file src="src/ios/gad/DoubleClick/GADAdSizeDelegate.h" />
+        <header-file src="src/ios/gad/DoubleClick/GADAppEventDelegate.h" />
+        <header-file src="src/ios/gad/DoubleClick/GADSwipeableBannerViewDelegate.h" />
+        
+        <!-- Google AdMob 6.9.2 framework -->
+        <source-file src="src/ios/libGoogleAdMobAds.a" framework="true" />
+        
+        <!-- iOS development frameworks need by Google AdMob 6.9.2 framework -->
+        <framework src="AdSupport.framework" />
+        <framework src="AudioToolbox.framework" />
+        <framework src="AVFoundation.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="MessageUI.framework" />
+        <framework src="StoreKit.framework" />
+        <framework src="SystemConfiguration.framework" />
+    </platform>
+</plugin>
