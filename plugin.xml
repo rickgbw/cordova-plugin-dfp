@@ -48,7 +48,7 @@
         <header-file src="src/ios/gad/DoubleClick/GADSwipeableBannerViewDelegate.h" />
         
         <!-- Google AdMob 6.9.2 framework -->
-        <source-file src="src/ios/libGoogleAdMobAds.a" framework="true" />
+        <source-file src="src/ios/gad/libGoogleAdMobAds.a" framework="true" />
         
         <!-- iOS development frameworks need by Google AdMob 6.9.2 framework -->
         <framework src="AdSupport.framework" />
